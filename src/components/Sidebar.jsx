@@ -7,19 +7,28 @@ import {
   BagIcon,
   SettingsIcon,
   HelpIcon,
+  DashboardIcon,
+  LeaderboardIcon,
+  CartIcon,
+  SalesReportIcon,
+  MessageIcon,
+  LogoutIcon,
 } from './Icons'
 
 const navItems = [
-  { label: 'Dashboard', to: '/', icon: GridIcon, end: true },
-  { label: 'Analytics', to: '/analytics', icon: ChartIcon },
-  { label: 'Revenue', to: '/revenue', icon: WalletIcon },
+  { label: 'Dashboard', to: '/', icon: DashboardIcon, end: true },
+  { label: 'Leaderboard', to: '/analytics', icon: LeaderboardIcon },
+  { label: 'Order', to: '/revenue', icon: CartIcon },
   { label: 'Customers', to: '/customers', icon: UsersIcon },
   { label: 'Products', to: '/products', icon: BagIcon },
+  { label: 'Sales Report', to: '/sales-report', icon: SalesReportIcon },
+  { label: 'Messages', to: '/messages', icon: MessageIcon },
 ]
 
 const bottomItems = [
   { label: 'Settings', to: '/settings', icon: SettingsIcon },
   { label: 'Help Center', to: '/help', icon: HelpIcon },
+  { label: 'Sign Out', to: '/logout', icon: LogoutIcon },
 ]
 
 function NavRow({ item, onNavigate }) {
@@ -64,25 +73,19 @@ export default function Sidebar({ open, onClose }) {
         {/* Brand */}
         <div className="flex items-center gap-3 px-2 pb-8">
           <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-600 text-lg font-extrabold text-white">
-            A
+            D
           </div>
           <div className="min-w-0 leading-tight">
-            <p className="truncate text-base font-extrabold tracking-tight text-ink-900">Aforro</p>
-            <p className="truncate text-xs font-medium text-ink-400">Sales Suite</p>
+            <p className="truncate text-base font-extrabold tracking-tight text-ink-900">Dabang</p>
           </div>
         </div>
 
         <nav className="flex flex-col gap-1">
-          <p className="px-3.5 pb-2 text-[11px] font-semibold uppercase tracking-wider text-ink-400">
-            Menu
-          </p>
+         
           {navItems.map((item) => (
             <NavRow key={item.label} item={item} onNavigate={onClose} />
           ))}
 
-          <p className="mt-6 px-3.5 pb-2 text-[11px] font-semibold uppercase tracking-wider text-ink-400">
-            General
-          </p>
           {bottomItems.map((item) => (
             <NavRow key={item.label} item={item} onNavigate={onClose} />
           ))}
@@ -90,12 +93,12 @@ export default function Sidebar({ open, onClose }) {
 
         {/* Upgrade card */}
         <div className="mt-6 rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 p-4 text-white">
-          <p className="text-sm font-semibold">Upgrade to Pro</p>
+          <p className="text-sm font-semibold">Dabang Pro</p>
           <p className="mt-1 text-xs text-brand-100">
-            Unlock advanced reports and unlimited exports.
+            Get access to all features on tetembus.
           </p>
           <button className="mt-3 w-full rounded-lg bg-white/95 py-2 text-xs font-semibold text-brand-700 transition hover:bg-white">
-            Upgrade now
+            Get Pro
           </button>
         </div>
       </aside>

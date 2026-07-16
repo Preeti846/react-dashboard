@@ -7,6 +7,9 @@ import Customers from './pages/Customers'
 import Products from './pages/Products'
 import Settings from './pages/Settings'
 import HelpCenter from './pages/HelpCenter'
+import SalesReport from './pages/SalesReport'
+import SignOut from './pages/SignOut'
+import Messages from './pages/Messages'
 
 export default function App() {
   return (
@@ -19,6 +22,9 @@ export default function App() {
           <Route path="/customers" element={<Customers />} />
           <Route path="/products" element={<Products />} />
           <Route path="/settings" element={<Settings />} />
+           <Route path="/sales-report" element={<SalesReport />} />
+           <Route path="/messages" element={<Messages />} />
+            <Route path="/logout" element={<SignOut />} />
           <Route path="/help" element={<HelpCenter />} />
           <Route path="*" element={<Dashboard />} />
         </Route>

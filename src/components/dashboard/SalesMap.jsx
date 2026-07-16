@@ -1,4 +1,9 @@
 import Card from '../Card'
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+} from "react-simple-maps";
 
 // Stylized, non-geographic continent silhouettes — this is a decorative locator map,
 // not a choropleth, so precision isn't the point; the legend below carries the actual
@@ -34,17 +39,25 @@ export default function SalesMap() {
   return (
     <Card title="Sales Mapping by Country" subtitle="Share of orders by region">
       <div className="overflow-hidden rounded-xl bg-white" style={DOT_BG}>
-        <svg viewBox="0 0 400 180" className="h-40 w-full">
-          {CONTINENTS.map((d, i) => (
-            <path key={i} d={d} fill="#c9c6ec" />
-          ))}
-          {MARKERS.map((m) => (
-            <g key={m.label}>
-              <circle cx={m.x} cy={m.y} r="10" fill={m.color} opacity="0.22" />
-              <circle cx={m.x} cy={m.y} r="4.5" fill={m.color} stroke="white" strokeWidth="1.5" />
-            </g>
-          ))}
-        </svg>
+        <ComposableMap
+          projectionConfig={{ scale: 100 }}
+          width={400}
+          height={180}
+        >
+          <Geographies geography="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json">
+            {({ geographies }) =>
+              geographies.map((geo) => (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill="#E5E5E5"
+                  stroke="#FFFFFF"
+                  strokeWidth={0.3}
+                />
+              ))
+            }
+          </Geographies>
+        </ComposableMap>
       </div>
 
       <ul className="mt-4 space-y-2.5">

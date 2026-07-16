@@ -19,10 +19,33 @@ export const GridIcon = (p) => (
   </svg>
 )
 
+export const DashboardIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M12 3a9 9 0 1 0 9 9h-9V3Z" />
+    <path d="M13 3.05A9 9 0 0 1 20.95 11H13V3.05Z" />
+  </svg>
+)
+
+export const LeaderboardIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M5 20V10" />
+    <path d="M12 20V4" />
+    <path d="M19 20V14" />
+  </svg>
+)
+
 export const ChartIcon = (p) => (
   <svg {...base} {...p}>
     <path d="M3 3v18h18" />
     <path d="M7 15l3-4 3 2 4-6" />
+  </svg>
+)
+
+export const CartIcon = (p) => (
+  <svg {...base} {...p}>
+    <circle cx="9" cy="20" r="1" />
+    <circle cx="18" cy="20" r="1" />
+    <path d="M3 4h2l2.3 10h10.8l2-7H7" />
   </svg>
 )
 
@@ -44,9 +67,9 @@ export const UsersIcon = (p) => (
 )
 
 export const BagIcon = (p) => (
-  <svg {...base} {...p}>
-    <path d="M4 8h16l-1 12H5L4 8Z" />
-    <path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2" />
+   <svg {...base} {...p}>
+    <rect x="5" y="7" width="14" height="13" rx="1.5" />
+    <path d="M9 7V5a3 3 0 0 1 6 0v2" />
   </svg>
 )
 
@@ -54,6 +77,22 @@ export const SettingsIcon = (p) => (
   <svg {...base} {...p}>
     <circle cx="12" cy="12" r="3" />
     <path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z" />
+  </svg>
+)
+
+export const SalesReportIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M4 19V5" />
+    <path d="M4 19h16" />
+    <polyline points="7 15 11 11 14 13 19 8" />
+  </svg>
+)
+
+export const MessageIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" />
+    <path d="M8 9h8" />
+    <path d="M8 13h5" />
   </svg>
 )
 
@@ -69,6 +108,14 @@ export const SearchIcon = (p) => (
   <svg {...base} {...p}>
     <circle cx="11" cy="11" r="7" />
     <path d="m20 20-3.2-3.2" />
+  </svg>
+)
+
+export const LogoutIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+    <path d="M10 17l5-5-5-5" />
+    <path d="M15 12H3" />
   </svg>
 )
 
